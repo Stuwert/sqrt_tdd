@@ -1,0 +1,23 @@
+{
+  "Monday" : {
+    "planet": "Moon"
+  },
+  "Tuesday" : {
+    "planet": "Mars"
+  },
+  "Wednesday" : {
+    "planet" : "Mercury"
+  },
+  "Thursday" : {
+    "planet": "Jupiter"
+  },
+  "Friday" : {
+    "planet": "Venus"
+  },
+  "Saturday" : {
+    "planet": "Saturn"
+  },
+  "Sunday" : {
+    "planet": "Sun"
+  }
+}

@@ -1,26 +1,4 @@
-var object = {
-  "Monday" : {
-    planet: "Moon"
-  },
-  "Tuesday" : {
-    planet: "Mars"
-  },
-  "Wednesday" : {
-    planet : "Mercury"
-  },
-  "Thursday" : {
-    planet: "Jupiter"
-  },
-  "Friday" : {
-    planet: "Venus"
-  },
-  "Saturday" : {
-    planet: "Saturn"
-  },
-  "Sunday" : {
-    planet: "Sun"
-  }
-}
+var object = require('./weekday_info.json')
 
 function planetCorrespondence(day){
   day = day.toLowerCase();
