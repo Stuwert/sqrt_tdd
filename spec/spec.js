@@ -34,6 +34,25 @@ describe('Returns characters that have been matched by a regular expression', fu
 describe('Returns the number of button presses that will be required per button', function(){
   var stringy = "abcdefghijklmnopqrstuvwxyz0123456789 *#"
   it('will return the sum of every one button press', function(){
-    expect(multiTap.buttonPressSum(string, "one")).toEqual(12);
+    expect(multiTap.buttonPressSum(stringy, "one")).toEqual(12);
+  })
+  it('will return the sum of every two button presses', function(){
+    expect(multiTap.buttonPressSum(stringy, "two")).toEqual(18);
+  })
+  it('will return the sum of every three button presses', function(){
+    expect(multiTap.buttonPressSum(stringy, "three")).toEqual(24);
+  })
+  it('will return the sum of every four button presses', function(){
+    expect(multiTap.buttonPressSum(stringy, "four")).toEqual(32);
+  })
+  it('will return the sum of every five button presses', function(){
+    expect(multiTap.buttonPressSum(stringy, "five")).toEqual(10);
+  })
+})
+
+describe('Loops through all 5 character types', function(){
+  var stringy = "abcdefghijklmnopqrstuvwxyz0123456789 *#"
+  it('and returns the total value of the string', function(){
+    expect(multiTap.totaller(stringy, "one")).toEqual(12+18+24+32+10)
   })
 })
