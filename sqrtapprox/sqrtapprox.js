@@ -7,11 +7,17 @@ module.exports = {
     return Math.sqrt(integer) - (Math.sqrt(integer) % 1);
   },
   putItAllTogether: function(integer){
-    if(this.isASquare(integer)){
-      return Math.sqrt(integer);
-    }else{
-      var nextSmall = this.nextSmallest(integer);
-      return [nextSmall, nextSmall + 1];
+    // if(this.isASquare(integer)){
+    //   return Math.sqrt(integer);
+    // }else{
+    //   var nextSmall = this.nextSmallest(integer);
+    //   return [nextSmall, nextSmall + 1];
+    // }
+    var root = this.smallestRoot(integer);
+    if(root * root === integer){
+      return root;
+    } else{
+      return [root, root + 1]
     }
   },
   smallestRoot: function(integer){
