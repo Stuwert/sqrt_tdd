@@ -15,3 +15,13 @@ describe("Determine whether or not the number is a square root", function(){
     expect(square.isASquare(5)).toEqual(false);
   })
 })
+
+// describe("Finds the next smallest square", function(){
+//   it('iterates until it returns the next smallest square')
+// })
+
+describe('Returns the smallest real square', function(){
+  it('by removing the decimals from the answer', function(){
+    expect(square.nextSmallest(5)).toEqual(2)
+  })
+})
