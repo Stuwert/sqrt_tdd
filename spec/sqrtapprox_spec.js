@@ -25,3 +25,12 @@ describe('Returns the smallest real square', function(){
     expect(square.nextSmallest(5)).toEqual(2)
   })
 })
+
+describe('Returns either the square root of a number, or the array of the two nearest integer square roots', function(){
+  it('by returning a single number if the number is a square', function(){
+    expect(square.putItAllTogether(4)).toEqual(2);
+  })
+  it('by returning an array of 2 numbers if the number is not a square', function(){
+    expect(square.putItAllTogether(5)).toEqual([2,3]);
+  })
+})
