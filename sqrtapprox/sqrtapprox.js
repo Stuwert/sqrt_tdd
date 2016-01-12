@@ -13,5 +13,16 @@ module.exports = {
       var nextSmall = this.nextSmallest(integer);
       return [nextSmall, nextSmall + 1];
     }
+  },
+  smallestRoot: function(integer){
+    var nextSmallest = 0, i=1;
+    while(i){
+      if (i * i > integer){
+        return nextSmallest;
+      }else{
+        nextSmallest = i;
+        i++;
+      }
+    }
   }
 }

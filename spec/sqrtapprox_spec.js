@@ -46,3 +46,15 @@ describe('Returns either the square root of a number, or the array of the two ne
     expect(square.putItAllTogether(5)).toEqual([2,3]);
   })
 })
+
+describe('Returns the smallest root of a number', function(){
+  it('and will return the exact root if its a square', function(){
+    expect(square.smallestRoot(4)).toEqual(2)
+  })
+  it('and will return the next smallest root if it is not', function(){
+    expect(square.smallestRoot(5)).toEqual(2)
+  })
+  it('and will return the next smallest root if it is not', function(){
+    expect(square.smallestRoot(1)).toEqual(1)
+  })
+})
