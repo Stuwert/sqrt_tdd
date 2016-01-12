@@ -5,6 +5,15 @@
 // an integer k if n is a square number, such that k * k == n or
 // a range (k, k+1), such that k * k < n and n < (k+1) * (k+1).
 
+
+// sqrtApproximation
+// should work for integer roots
+// TypeError: Object #<Object> has no method 'sqrt'
+//    at Object.isASquare
+//     at sqrtApproximation
+//         at Test.it
+//         at Test.describe
+
 var square = require('../sqrtapprox/sqrtapprox');
 
 describe("Determine whether or not the number is a square root", function(){
@@ -13,6 +22,9 @@ describe("Determine whether or not the number is a square root", function(){
   })
   it('by returning true if the number is a square root', function(){
     expect(square.isASquare(5)).toEqual(false);
+  })
+  it('by returning true if a number is a root', function(){
+    expect(square.isASquare(0)).toEqual(true);
   })
 })
 
