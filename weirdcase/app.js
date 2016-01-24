@@ -1,13 +1,12 @@
 function toWeirdCase(string){
-  var newString = "";
-  for(var i=0; i<string.length; i++){
-    if(i % 2 === 0){
-      newString += string[i].toUpperCase();
-    }else{
-      newString += string[i].toLowerCase();
-    }
-  }
-  return newString;
+  var newStringArray = string.split(' ');
+  newStringArray = newStringArray.map(function(item){
+    return item.split('').map(function(item, i){
+      return i % 2 === 0 ? item.toUpperCase() : item.toLowerCase()
+    }).join('');
+  })
+  return newStringArray.join(' ')
 }
 
 console.log(toWeirdCase("String"));
+console.log(toWeirdCase("String String"));
